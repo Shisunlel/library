@@ -68,7 +68,7 @@ function addToView() {
   });
 }
 
-if (localLibrary != "") {
+if (localLibrary != "" && localLibrary != null) {
   myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
   addToView();
 }
