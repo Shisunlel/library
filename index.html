@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css">
+    <title>Library</title>
+  </head>
+  <body>
+    <header>
+      <h1>Rapol's Library</h1>
+    </header>
+    <section id="new-book">
+      <div id="add-new">
+        <button id="add-new-button">Add New</button>
+      </div>
+      <div class="popup">
+        <button class="close">X</button>
+        <form>
+          <div class="form-input">
+            <label for="title">Title</label>
+            <input type="text" id="title" placeholder="Title" required>
+          </div>
+          <div class="form-input">
+            <label for="author">Author</label>
+            <input type="text" id="author" placeholder="Author" required>
+          </div>
+          <div class="form-input">
+            <label for="pageNumber">Page Number</label>
+            <input type="number" id="pageNumber" placeholder="Page Number" required>
+          </div>
+          <div class="form-input" id="checkbox-input">
+            <label for="hasRead">hasRead</label>
+            <input type="checkbox" id="hasRead">
+          </div>
+          <input type="submit" value="Save">
+        </form>
+      </div>
+    </section>
+    <main id="book-container">
+    </main>
+    <footer>
+      <h5>Made with ♥ by <a href="//github.com/shisunlel">Rapol</a></h5>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
