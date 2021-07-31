@@ -13,14 +13,52 @@ const setLocal = (myLibrary) => {
   localLibrary = localStorage.getItem("myLibrary");
 };
 
-function Book(title, author, pageNumber, hasRead) {
-  this.title = title;
-  this.author = author;
-  this.pageNumber = pageNumber;
-  this.hasRead = hasRead;
-  this.info = () => {
-    return `${this.title} by ${this.author}, ${this.pageNumber} pages, ${this.hasRead}`;
-  };
+// function Book(title, author, pageNumber, hasRead) {
+//   this.title = title;
+//   this.author = author;
+//   this.pageNumber = pageNumber;
+//   this.hasRead = hasRead;
+// }
+
+class Book {
+  constructor(title, author, pageNumber, hasRead) {
+    this.title = title;
+    this.author = author;
+    this.pageNumber = pageNumber;
+    this.hasRead = hasRead;
+  }
+
+  get title() {
+    return this._title;
+  }
+
+  set title(val) {
+    return (this._title = val);
+  }
+
+  get author() {
+    return this._author;
+  }
+
+  set author(val) {
+    return (this._author = val);
+  }
+
+  get pageNumber() {
+    return this._pageNumber;
+  }
+
+  set pageNumber(val) {
+    return (this._pageNumber = val);
+  }
+
+  get hasRead() {
+    return this._hasRead;
+  }
+
+  set hasRead(val) {
+    return (this._hasRead = val);
+  }
 }
 
 function addToGrid(e) {
